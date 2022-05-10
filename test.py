@@ -1,7 +1,5 @@
-from pyvis.network import Network
+from Graph import Graph
 
-G =  Network()
+G = Graph(["A","B","C"], [("A", "B")])
 
-G.add_nodes(["a", "b", "c"])
-
-G.show("test.html")
+G.display()
