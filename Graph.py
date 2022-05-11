@@ -5,17 +5,13 @@ class Graph:
 
     def __init__(self, nodes=[], edges=[]):
         #Add nodes if provided
-        self.adjlist = {}
-        if nodes:
-            self.adjlist = dict.fromkeys(nodes, [])
+        self.adjlist = {n: [] for n in nodes}
 
-        print(self.adjlist)
         #Add edges
         for edge in edges:
-            print(edges)
             if edge[0] in nodes and edge[1] in nodes:
-                print("ADD")
                 self.adjlist[edge[0]].append(edge[1])
+        
 
     
     def display(self, file="graph.html"):
